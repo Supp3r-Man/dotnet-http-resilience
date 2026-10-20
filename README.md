@@ -9,7 +9,7 @@ flaps, goes slow and sheds load.
 This is a learning and showcase project. It does not use Polly or Microsoft.Extensions.Http.Resilience and it does
 not claim feature or behaviour parity with either.
 
-CI not yet confirmed. Tested only on Windows 11 with .NET SDK 10.0.402.
+CI ran green on the first run on GitHub Actions (ubuntu-latest, 2026-10-20). Tested locally only on Windows 11 with .NET SDK 10.0.402.
 
 ## Usage
 
