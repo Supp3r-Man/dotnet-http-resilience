@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/demo/">
+    <Project Path="demo/Demo/Demo.csproj" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/HttpResilience/HttpResilience.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/HttpResilience.Tests/HttpResilience.Tests.csproj" />
+  </Folder>
+</Solution>

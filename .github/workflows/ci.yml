@@ -1,0 +1,23 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: 10.0.x
+      - name: Restore
+        run: dotnet restore
+      - name: Build
+        run: dotnet build --no-restore -c Release -warnaserror
+      - name: Test
+        run: dotnet test --no-build -c Release
+      - name: Run the demo with small settings
+        run: dotnet run --no-build -c Release --project demo/Demo -- --requests 60 --rate 100 --runs 1
